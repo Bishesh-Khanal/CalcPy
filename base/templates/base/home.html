@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>This is the home page of the calculator!</h1>
+    <section>
+        {% for calculator in calculators %}
+            <section>
+                <h5><a href="{{ calculator.id }}">{{calculator.name}}</a></h5>
+            </section>
+        {% endfor %}
+    </section>
+{% endblock %}
