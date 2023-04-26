@@ -4,9 +4,8 @@ calculators = [
     {'id':'graph', 'name':'GraphingCalculator'},
     {'id':'matrix', 'name':'MatrixCalculator'},
     {'id':'scientific', 'name':'ScientificCalculator'},
-    {'id':'vector', 'name':'VectorCalculator'},
+    {'id':'statistics', 'name':'StatisticsCalculator'},
 ]
 
 def home(request):
-    context={'calculators':calculators}
-    return render(request, 'base/home.html', context)
+    return render(request, 'base/home.html')

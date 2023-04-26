@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Path: styles\home.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.main-section {
+    height: calc(100vh - 64px);
+    width: 100%;
+}
+
+/* Desmos dark theming */
+
+.dcg-exppanel-container{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    padding-bottom: 10px 5px;
+}
+
+
+.dcg-expression-top-bar {
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+.dcg-exppanel {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.dcg-expressions-branding {
+    display: none;
+}
+
+.dcg-keys-background {
+    margin-bottom: 15px;
+}
+
+.dcg-axis-label {
+    display: none;
+}
+
+
+
+/* for tables in stats */
+
+.table-of-data td {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+

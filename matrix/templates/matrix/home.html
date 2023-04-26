@@ -1,5 +1,150 @@
 {% extends 'index.html' %}
-
 {% block content %}
-    <h1>This is the matrix calculator!</h1>
+    <title class="title">Matrix</title>
+
+    <!--MAIN BODY STARTS -->
+    <div class="main-section">
+
+        <div class="calc-container h-full w-full">
+
+        
+          
+        
+
+            <div class="mockup-window border border-base-300 h-full rounded-none">
+                <div class="flex justify-center align-center border-base-300 border-t h-full w-full">
+                    
+                    <div class="matrix grid">
+
+                        <div class="grid grid-cols-11 gap-5 m-auto">
+
+                            <div class="first-matrix col-span-3 flex justify-center">
+    
+                                <div class="max-w-full p-0 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                    
+                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                        <div class="font-semibold text-gray-900 dark:text-white flex align-center">
+                                            <!--ask for size-->
+                                            <span class = "mr-2 mt-2">Size: </span>
+                                            <!--input box small size-->
+                                                <input type="text" id="small-input" type = "sumbit" class="block mr-2 w-10 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">    
+                                                <input type="text" id="small-input" type = "sumbit" class="block w-10 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <div class = "w-3/5 h-0invisible"></div>
+                                                <button type="button" data-popover-target="popover-no-arrow" class="align-right text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"><i class='bx bx-info-circle'></i></button>
+                                                <div data-popover id="popover-no-arrow" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                                        <h3 class="font-semibold text-gray-900 dark:text-white">Details</h3>
+                                                    </div>
+                                                    <div class="px-3 py-2">
+                                                        <p>Here lies details like the transpose and the inverse of the matrix</p>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+
+                                    <!--matrix generated-->
+
+                                    <div class="generated-matrix h-40 invisible">
+                                        <!--three rows of input boxes-->
+                                        width-checkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                                    </div>
+
+
+                                </div>        
+    
+    
+                            </div>
+    
+                            <div class="operator-col col-span-1">
+                                <!--select box-->
+                                <label for="operators" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Operator :</label>
+                                <select id="operators" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option value="US">+</option>
+                                <option value="CA">-</option>
+                                <option value="FR">x</option>
+                                </select>
+                            </div>
+    
+                            <div class="second-matrix col-span-3 flex justify-center">
+    
+                                <div class="max-w-sm p-0 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                    
+                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                        <div class="font-semibold text-gray-900 dark:text-white flex align-center">
+                                            <!--ask for size-->
+                                            <span class = "mr-2 mt-1">Size: </span>
+                                            <!--input box small size-->
+                                                <input type="text" id="small-input" class="block mr-2 w-10 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <input type="text" id="small-input" class="block w-10 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                <div class = "w-3/5 h-0invisible"></div>
+                                                <button type="button" data-popover-target="popover-no-arrow" class="align-right text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"><i class='bx bx-info-circle'></i></button>
+                                                <div data-popover id="popover-no-arrow" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                                        <h3 class="font-semibold text-gray-900 dark:text-white">Details</h3>
+                                                    </div>
+                                                    <div class="px-3 py-2">
+                                                        <p>Here lies details like the transpose and the inverse of the matrix</p>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+
+                                    <!--matrix generated-->
+
+                                    <div class="generated-matrix invisible">
+                                        width-checkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                                    </div>
+
+
+                                </div>        
+    
+                            </div>
+    
+                            <div class="equals-column col-span-1 grid">
+                                <span class = "text-4xl m-auto">=</span>
+                            </div>
+    
+                            <div class="answer-col col-span-3 flex justify-center">
+                                
+                                <div class="max-w-sm p-0 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                                    
+                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                        <div class="font-semibold text-gray-900 dark:text-white flex align-center">
+                                            <span class = "mt-2">Answer: </span>    
+                                            <div class = "w-4/5 h-0invisible"></div>
+                                                <button type="button" data-popover-target="popover-no-arrow" class="align-right text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"><i class='bx bx-info-circle'></i></button>
+                                                <div data-popover id="popover-no-arrow" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                                                    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+                                                        <h3 class="font-semibold text-gray-900 dark:text-white">Details</h3>
+                                                    </div>
+                                                    <div class="px-3 py-2">
+                                                        <p>Here lies details like the transpose and the inverse of the matrix</p>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+
+                                    <!--matrix generated-->
+
+                                    <div class="generated-matrix invisible">
+                                        width-checkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                                    </div>
+
+
+                                </div>        
+                                    
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
 {% endblock %}

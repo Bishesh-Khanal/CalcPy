@@ -22,7 +22,7 @@ urlpatterns = [
     path('', include('base.urls')),
     path('scientific/', include('scientific.urls'), name='scientific'),
     path('graph/', include('graph.urls'), name='graph'),
-    path('vector/', include('vector.urls'), name='vector'),
+    path('statistics/', include('vector.urls'), name='statistics'),
     path('matrix/', include('matrix.urls'), name='matrix'),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
