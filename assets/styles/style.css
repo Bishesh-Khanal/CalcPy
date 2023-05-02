@@ -56,3 +56,23 @@
 }
 
 
+
+
+/* Change font size of all MathJax output */
+.MathJax {
+    font-size: 15px;
+    
+}
+
+
+mjx-mo {
+    margin: 0px 10px;
+    /* transform it 4px down */
+    transform: translateY(4px);
+}
+
+
+
+
+
+
