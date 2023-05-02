@@ -1,5 +1,3 @@
-console.log('Sup');
-
 // tabs 
 const tabs = document.querySelectorAll('.tabs li');
 const tabContentBoxes = document.querySelectorAll('#tab-content > div');
@@ -102,3 +100,12 @@ function remove_windoww() {
 
   return;
 }
+
+
+
+
+
+
+
+
+
