@@ -73,6 +73,15 @@ mjx-mo {
 
 
 
+.simul-eq input {
+    text-align: center;
+    padding: 1px;
+}
+
+.poly-eq input {
+    text-align: center;
+    padding: 1px;
+}
 
 
 

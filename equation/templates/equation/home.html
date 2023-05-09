@@ -1,0 +1,261 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    <title class="title">Equation  Solver</title>
+    <!--MAIN BODY STARTS -->
+    <div class="main-section">
+
+        <div class="calc-container h-screen ">
+  
+          
+            <div class=" mockup-window border bg-base-300 top-1/4 h-auto mx-20">
+                <div class=" px-4 py-4 bg-base-200">
+
+
+                    <div class="grid grid-cols-2 gap-x-20 h-full">
+
+                        <div class="first-col col-span-1">
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Simultaneous Equations</h3>
+                            <div class="divider mt-2"></div> 
+                            
+                        </div>
+
+                        <div class="sec-col col-span-1">
+                            <h3 class="font-semibold text-gray-900 dark:text-white">Polynomial Equations</h3>
+                            <div class="divider mt-2"></div> 
+
+                        </div>
+
+                        <div class="simul-eq col-span-1">
+                            <div class="flex ml-8">
+                                <div class="flex items-center mr-4">
+                                    <input id="inline-radio" type="radio" value="1-val" name="simul-inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="inline-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">1-val</label>
+                                </div>
+                                
+                                <div class="flex items-center mr-4">
+                                    <input id="inline-2-radio" type="radio" value="2-val" name="simul-inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="inline-2-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">2-val</label>
+                                </div>
+
+                                <div class="flex items-center mr-4">
+                                    <input checked id="inline-checked-radio" type="radio" value="3-val" name="simul-inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="inline-checked-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">3-val</label>
+                                </div>
+
+                                <div class="flex items-center mr-4">
+                                    <input id="inline-2-radio" type="radio" value="4-val" name="simul-inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="inline-2-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">4-val</label>
+                                </div>
+                                
+                            </div>
+
+                            <div class="max-w-2xl p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-full mt-5">
+
+                                <div class="grid grid-cols-5 gap-x-4">
+                                    <div class="eqn-col grid place-content-center col-span-4">
+                                        <div id = "simul-eqns-box">
+
+                                            <div class = "grid rows gap-2">
+                                                <div id="3-var-first-eq ">
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-a1-value"/> 
+                                                    <span class="text-sm variable">x</span>
+                                                    <span class="text-sm mx-2">+</span>
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-b1-value"/>
+                                                    <span class="text-sm variable">y</span>
+                                                    <span class="text-sm mx-2">+</span>
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-c1-value"/>
+                                                    <span class="text-sm variable">z</span>
+                                                    <span class="text-sm mx-2">=</span>
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-k1-value"/>
+                                                </div>
+                                                <div id="3-var-second-eq">
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-a2-value"/> 
+                                                    <span class="text-sm variable">x</span>
+                                                    <span class="text-sm mx-2">+</span>
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-b2-value"/>
+                                                    <span class="text-sm variable">y</span>
+                                                    <span class="text-sm mx-2">+</span>
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-c2-value"/>
+                                                    <span class="text-sm variable">z</span>
+                                                    <span class="text-sm mx-2">=</span>
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-k2-value"/>
+                                                </div>
+                                                <div id="3-var-third-eq">
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-a3-value"/> 
+                                                    <span class="text-sm variable">x</span>
+                                                    <span class="text-sm mx-2">+</span>
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-b3-value"/>
+                                                    <span class="text-sm variable">y</span>
+                                                    <span class="text-sm mx-2">+</span>
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-c3-value"/>
+                                                    <span class="text-sm variable">z</span>
+                                                    <span class="text-sm mx-2">=</span>
+                                                    <input type="text" placeholder="" class="input input-bordered input-sm w-12" id = "var-3-k3-value"/>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        
+                                        <!--calculate button-->
+                                        <div class="space grid mt-4">
+                                            <div class="calculate-btn m-auto">
+                                                <button id = "simul-calc-btn" class="btn btn-primary btn-sm">Calculate</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+
+                                    <div id = "simul-answer-box" class="answers">
+
+                                        <div class="max-w-sm px-2 py-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 grid">
+                                            <div class="values m-auto">
+                                                <span>
+                                                    <span class="text-base variable">x</span>
+                                                    <span class="text-base">=</span>
+                                                    <span class="text-base" id = "var-3-x-ans">0</span>
+                                                </span>
+                                                <br>
+                                                <span>
+                                                    <span class="text-base variable">y</span>
+                                                    <span class="text-base">=</span>
+                                                    <span class="text-base" id = "var-3-y-ans">0</span>
+                                                </span>
+                                                <br>
+                                                <span>
+                                                    <span class="text-base variable">z</span>
+                                                    <span class="text-base">=</span>
+                                                    <span class="text-base" id = "var-3-z-ans">0</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="poly-eq col-span-1">
+
+
+                            <div class="flex ml-8">
+                                <div class="flex items-center mr-4">
+                                    <input id="inline-radio" type="radio" value="2-deg" name="poly-inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="inline-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">2ⁿᵈ - degree</label>
+                                </div>
+                                
+                                <div class="flex items-center mr-4">
+                                    <input id="inline-2-radio" type="radio" value="3-deg" name="poly-inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="inline-2-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">3ʳᵈ - degree</label>
+                                </div>
+
+                                <div class="flex items-center mr-4">
+                                    <input checked id="inline-radio" type="radio" value="4-deg" name="poly-inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                    <label for="inline-radio" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">4ᵗʰ - degree </label>
+                                </div>
+
+                                
+                                
+                            </div>
+
+                            <div class="max-w-2xl p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-full mt-5">
+
+                                <div class="grid grid-cols-5 gap-x-4">
+                                    
+                                    <div class="eqn-col grid place-content-center col-span-4">
+
+                                        <div id = "poly-eqns-box">
+
+                                            <div class="4-deg-eqn">
+                                                <input type="text" placeholder="" class="input input-bordered p-0.5 input-sm w-12" id = "deg-4-a-value"/>
+                                                <span class="text-sm">x⁴</span>
+                                                <span class="text-sm mx-2">+</span>
+                                                <input type="text" placeholder="" class="input input-bordered p-0.5 input-sm w-12" id = "deg-4-b-value"/>
+                                                <span class="text-sm">x³</span>
+                                                <span class="text-sm mx-2">+</span>
+                                                <input type="text" placeholder="" class="input input-bordered p-0.5 input-sm w-12" id = "deg-4-c-value"/>
+                                                <span class="text-sm">x²</span>
+                                                <span class="text-sm mx-2">+</span>
+                                                <input type="text" placeholder="" class="input input-bordered p-0.5 input-sm w-12" id = "deg-4-d-value"/>
+                                                <span class="text-sm">x</span>
+                                                <span class="text-sm mx-2">+</span>
+                                                <input type="text" placeholder="" class="input input-bordered p-0.5 input-sm w-12" id = "deg-4-e-value"/>
+                                                <span class="text-sm mx-2">=</span>
+                                                <span class = "text-sm">0</span>
+                                            </div>
+
+                                        </div>
+                                        
+                                        
+                                        <div class="space grid mt-4">
+                                            <div class="calculate-btn m-auto">
+                                                <button id = "poly-calc-btn" class="btn btn-primary btn-sm">Calculate</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div id = "poly-answer-box" class="answers">
+
+                                        <div class="max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 grid">
+                                            <div class="values m-auto">
+                                                <span>
+                                                    <span class="text-base variable">x</span>
+                                                    <span class="text-base">=</span>
+                                                    <span class="text-base" id = "deg-4-x1">0</span>
+                                                </span>
+                                                <br>
+                                                <span>
+                                                    <span class="text-base variable">x</span>
+                                                    <span class="text-base">=</span>
+                                                    <span class="text-base" id = "deg-4-x2">0</span>
+                                                </span>
+                                                <br>
+                                                <span>
+                                                    <span class="text-base variable">x</span>
+                                                    <span class="text-base">=</span>
+                                                    <span class="text-base" id = "deg-4-x3">0</span>
+                                                </span>
+                                                <br>
+                                                <span>
+                                                    <span class="text-base variable">x</span>
+                                                    <span class="text-base">=</span>
+                                                    <span class="text-base" id = "deg-4-x4">0</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                
+                                
+                            </div>
+
+                        </div>
+
+                     </div>
+
+                </div>
+              </div>
+
+            
+
+
+        </div>
+    </div>
+    
+    
+    
+    
+
+    <script src = "{% static 'js/equation.js' %}"></script>
+    <script src = "{% static 'js/all.min.js' %}"></script>
+{% endblock %}
+
