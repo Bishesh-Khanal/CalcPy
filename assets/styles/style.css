@@ -85,3 +85,9 @@ mjx-mo {
 
 
 
+#box-plot-render, #bar-graph-render {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

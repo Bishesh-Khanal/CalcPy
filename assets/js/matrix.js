@@ -848,7 +848,19 @@ mat1_inv_btn.addEventListener('click', function() {
         return;
     }
 
-    // check the determinant
+    // check if the matrix is square
+    if (!square_matrix_checker(mat1)) {
+        document.body.insertAdjacentHTML('beforeend', toast_generator('Please enter a square matrix!'));
+            
+        // remove the toast after 3 seconds
+        setTimeout(function() {
+            document.getElementById('toast-bottom-right').remove();
+        }
+        , 3000);
+        return;
+    }
+
+    // if the matrix is square check the determinant
     let det = determinant(mat1);
 
     if (det == 0) {
@@ -904,6 +916,18 @@ mat2_inv_btn.addEventListener('click', function() {
     // validate the matrix
     if(!matrix_validator(mat2)) {
         document.body.insertAdjacentHTML('beforeend', toast_generator('Please enter valid matrix values!'));
+            
+        // remove the toast after 3 seconds
+        setTimeout(function() {
+            document.getElementById('toast-bottom-right').remove();
+        }
+        , 3000);
+        return;
+    }
+
+    // check if the matrix is square
+    if (!square_matrix_checker(mat2)) {
+        document.body.insertAdjacentHTML('beforeend', toast_generator('Please enter a square matrix!'));
             
         // remove the toast after 3 seconds
         setTimeout(function() {
@@ -969,6 +993,18 @@ ans_inv_btn.addEventListener('click', function() {
     // validate the matrix
     if(!matrix_validator(ans)) {
         document.body.insertAdjacentHTML('beforeend', toast_generator('Please enter valid matrix values!'));
+            
+        // remove the toast after 3 seconds
+        setTimeout(function() {
+            document.getElementById('toast-bottom-right').remove();
+        }
+        , 3000);
+        return;
+    }
+
+    // check if the matrix is square
+    if (!square_matrix_checker(ans)) {
+        document.body.insertAdjacentHTML('beforeend', toast_generator('Please enter a square matrix!'));
             
         // remove the toast after 3 seconds
         setTimeout(function() {
