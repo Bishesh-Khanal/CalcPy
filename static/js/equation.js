@@ -887,3 +887,4 @@ poly_solve_btn.addEventListener('click', function() {
     return;
 }); 
 
+document.getElementById('eq').classList.add('active');

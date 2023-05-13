@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'matrix.apps.MatrixConfig',
     'equation.apps.EquationConfig',
     'unit.apps.UnitConfig',
+    'graph3D.apps.Graph3DConfig',
     "debug_toolbar",
 ]
 

@@ -518,7 +518,7 @@ compute_btn.addEventListener('click', function() {
     return;
 });
 
-
+document.getElementById('st').classList.add('active');
 
 
 

@@ -721,3 +721,4 @@ function onChangeConversion2() {
 input_box_1.addEventListener('input', onChangeConversion1);
 input_box_2.addEventListener('input', onChangeConversion2);
 
+document.getElementById('un').classList.add('active');

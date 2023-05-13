@@ -26,5 +26,6 @@ urlpatterns = [
     path('matrix/', include('matrix.urls'), name='matrix'),
     path('equation/', include('equation.urls'), name='equation'),
     path('unit/', include('unit.urls'), name='unit'),
+    path('graph3D/', include('graph3D.urls'), name='graph3D'),
     path('__debug__/', include('debug_toolbar.urls')),
 ]
