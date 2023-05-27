@@ -256,6 +256,10 @@
     
 
     <script src = "{% static 'js/equation.js' %}"></script>
-    <script src = "{% static 'js/all.min.js' %}"></script>
+    <script src = "{% static 'js/neradmer/all.min.js' %}"></script>
+    <script src="{% static 'js/algebrite.bundle-for-browser.js' %}"></script>
+    <script>
+        document.getElementById('eq').classList.add('active');
+    </script>
 {% endblock %}
 
